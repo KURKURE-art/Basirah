@@ -1,239 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Basirah Institute of Research & Development</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+  <title>Basirah Institute of Research & Development</title>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7fa;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-/* ================= HEADER ================= */
-
-header{
-    position:sticky;
-    top:0;
-    width:100%;
-    background:#0f2d52;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
-    z-index:1000;
-}
-
-.header-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 35px;
-}
-
-/* Left */
-
-.logo-text{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    color:white;
-    font-size:26px;
-    font-weight:bold;
-}
-
-.logo-text .arabic{
-    color:#d4af37;
-}
-
-/* Navigation */
-
-nav{
-    display:flex;
-    gap:35px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-    position:relative;
-    transition:.3s;
-}
-
-nav a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0;
-    height:2px;
-    background:#d4af37;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#d4af37;
-}
-
-nav a:hover::after{
-    width:100%;
-}
-
-/* Right */
-
-.right{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.logo img{
-    height:70px;
-    display:block;
-}
-
-.menu-btn{
-    display:none;
-    font-size:32px;
-    color:white;
-    cursor:pointer;
-    user-select:none;
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width:900px){
-
-.header-container{
-    flex-wrap:wrap;
-    padding:15px 20px;
-}
-
-.logo-text{
-    font-size:18px;
-}
-
-.logo img{
-    height:50px;
-}
-
-.menu-btn{
-    display:block;
-}
-
-nav{
-    display:none;
-    flex-direction:column;
-    width:100%;
-    margin-top:15px;
-    background:#143d6b;
-    border-radius:8px;
-    overflow:hidden;
-}
-
-nav.show{
-    display:flex;
-}
-
-nav a{
-    padding:15px;
-    text-align:center;
-    border-bottom:1px solid rgba(255,255,255,.15);
-}
-
-nav a:last-child{
-    border-bottom:none;
-}
-
-}
-
-/* Demo */
-
-main{
-    padding:60px 40px;
-}
-
-.hero{
-    background:white;
-    padding:40px;
-    border-radius:10px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-}
-
-</style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
 
-<div class="header-container">
+<div class="logo-section">
 
-    <!-- Left -->
-    <div class="logo-text">
-        <span class="arabic">بصيرة</span>
-        <span>Institute of Research & Development</span>
-    </div>
+    <div class="title">
 
-    <!-- Center -->
-    <nav id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="development.html">Development</a>
-    </nav>
+        <div class="arabic">بصيرة</div>
 
-    <!-- Right -->
-    <div class="right">
-
-        <div class="menu-btn" onclick="toggleMenu()">
-            ☰
+        <div class="english-line">
+            <span class="english">Basirah</span>
+            <span class="institute">Institute of Research &amp; Development</span>
         </div>
 
-        <a href="index.html" class="logo">
-            <img src="logo1.png" alt="Basirah Logo">
-        </a>
-
     </div>
+
+</div>
+
+<nav id="navbar">
+
+<a href="#">Home</a>
+
+<a href="#">About</a>
+
+<a href="#">Research</a>
+
+<a href="#">Publications</a>
+
+<a href="#">Development</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+<div class="logo-box">
+
+<img src="logo.png" alt="Basirah Logo">
+
+</div>
+
+<div class="menu-btn" id="menuBtn">
+
+☰
 
 </div>
 
 </header>
 
-<main>
+<!-- Mobile Navigation -->
 
-<div class="hero">
+<div class="mobile-menu" id="mobileMenu">
 
-<h1>Welcome to Basirah Institute of Research & Development</h1>
+<a href="#">Home</a>
+
+<a href="#">About</a>
+
+<a href="#">Research</a>
+
+<a href="#">Publications</a>
+
+<a href="#">Development</a>
+
+<a href="#">Contact</a>
+
+</div>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+Welcome to Basirah Institute of Research & Development
+</h1>
 
 <p>
-Your website content goes here.
+
+Advancing knowledge through research,
+innovation and scholarly excellence.
+
 </p>
 
-<br><br><br><br><br><br><br><br><br><br>
+<button>
 
-<p>Scroll to test the sticky header.</p>
+Explore Research
 
-<br><br><br><br><br><br><br><br><br><br>
+</button>
 
-<p>More content...</p>
+</div>
+
+</section>
+
+<!-- Main -->
+
+<div class="container">
+
+<main>
+
+<div class="card">
+
+<h2>Welcome</h2>
+
+<p>
+
+This is your homepage.
+
+Here you can add journals,
+articles,
+announcements,
+news,
+research projects,
+downloads,
+and much more.
+
+</p>
+
+<br>
+
+<p>
+
+Scroll down to test the sticky sidebar.
+
+</p>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<p>
+
+More Content...
+
+</p>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<p>
+
+Even more content...
+
+</p>
 
 </div>
 
 </main>
 
-<script>
-function toggleMenu(){
-    document.getElementById("navMenu").classList.toggle("show");
-}
-</script>
+<aside>
+
+<div class="sidebar">
+
+<h3>Menu</h3>
+
+
+<div class="sidebar-category">
+
+<button class="side-btn">
+📌 Quick Links
+<span>+</span>
+</button>
+
+<div class="side-content">
+
+<a href="#">🏠 Home</a>
+<a href="#">ℹ About</a>
+<a href="#">📚 Journals</a>
+<a href="#">📄 Articles</a>
+<a href="#">📞 Contact</a>
+
+</div>
+
+</div>
+
+
+
+<div class="sidebar-category">
+
+<button class="side-btn">
+🔬 Research
+<span>+</span>
+</button>
+
+<div class="side-content">
+
+<a href="#">Research Areas</a>
+<a href="#">Research Projects</a>
+<a href="#">Researchers</a>
+<a href="#">Collaborations</a>
+
+</div>
+
+</div>
+
+
+
+<div class="sidebar-category">
+
+<button class="side-btn">
+⬇ Downloads
+<span>+</span>
+</button>
+
+<div class="side-content">
+
+<a href="#">Research Papers</a>
+<a href="#">Reports</a>
+<a href="#">Forms</a>
+<a href="#">Guidelines</a>
+
+</div>
+
+</div>
+
+
+
+<div class="sidebar-category">
+
+<button class="side-btn">
+📖 Publications
+<span>+</span>
+</button>
+
+<div class="side-content">
+
+<a href="#">Current Issue</a>
+<a href="#">Archive</a>
+<a href="#">Articles</a>
+
+</div>
+
+</div>
+
+
+
+<div class="sidebar-category">
+
+<button class="side-btn">
+✍ Submission
+<span>+</span>
+</button>
+
+<div class="side-content">
+
+<a href="#">Submit Paper</a>
+<a href="#">Reviewer Portal</a>
+<a href="#">Author Guidelines</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</aside>
+</div>
+
+<footer>
+
+© 2026 Basirah Institute of Research & Development
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
