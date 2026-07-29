@@ -31,20 +31,20 @@ header{
 
 .header-container{
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     padding:15px 35px;
 }
 
-/* Left Title */
+/* Left */
 
 .logo-text{
-    color:white;
-    font-size:28px;
-    font-weight:bold;
     display:flex;
     align-items:center;
     gap:8px;
+    color:white;
+    font-size:26px;
+    font-weight:bold;
 }
 
 .logo-text .arabic{
@@ -61,7 +61,6 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    font-size:17px;
     font-weight:600;
     position:relative;
     transition:.3s;
@@ -71,7 +70,7 @@ nav a::after{
     content:"";
     position:absolute;
     left:0;
-    bottom:-6px;
+    bottom:-5px;
     width:0;
     height:2px;
     background:#d4af37;
@@ -86,34 +85,30 @@ nav a:hover::after{
     width:100%;
 }
 
-/* Logo */
+/* Right */
+
+.right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
 
 .logo img{
     height:70px;
     display:block;
-    transition:.3s;
-}
-
-.logo img:hover{
-    transform:scale(1.08);
-}
-
-/* Mobile */
-
-#menu{
-    display:none;
 }
 
 .menu-btn{
     display:none;
-    font-size:30px;
+    font-size:32px;
     color:white;
     cursor:pointer;
+    user-select:none;
 }
 
-/* ============ MOBILE ============ */
+/* ================= MOBILE ================= */
 
-@media(max-width:900px){
+@media (max-width:900px){
 
 .header-container{
     flex-wrap:wrap;
@@ -122,7 +117,6 @@ nav a:hover::after{
 
 .logo-text{
     font-size:18px;
-    flex:1;
 }
 
 .logo img{
@@ -131,36 +125,35 @@ nav a:hover::after{
 
 .menu-btn{
     display:block;
-    margin-right:15px;
 }
 
 nav{
     display:none;
-    width:100%;
     flex-direction:column;
-    background:#143d6b;
+    width:100%;
     margin-top:15px;
+    background:#143d6b;
     border-radius:8px;
     overflow:hidden;
 }
 
+nav.show{
+    display:flex;
+}
+
 nav a{
-    text-align:center;
     padding:15px;
-    border-bottom:1px solid rgba(255,255,255,.12);
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.15);
 }
 
 nav a:last-child{
     border-bottom:none;
 }
 
-#menu:checked ~ nav{
-    display:flex;
 }
 
-}
-
-/* Demo Content */
+/* Demo */
 
 main{
     padding:60px 40px;
@@ -170,13 +163,12 @@ main{
     background:white;
     padding:40px;
     border-radius:10px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
 
 </style>
 
 </head>
-
 <body>
 
 <header>
@@ -190,7 +182,7 @@ main{
     </div>
 
     <!-- Center -->
-    <nav>
+    <nav id="navMenu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="research.html">Research</a>
@@ -199,9 +191,11 @@ main{
     </nav>
 
     <!-- Right -->
-    <div style="display:flex;align-items:center;">
+    <div class="right">
 
-        <label for="menu" class="menu-btn">&#9776;</label>
+        <div class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </div>
 
         <a href="index.html" class="logo">
             <img src="logo1.png" alt="Basirah Logo">
@@ -210,8 +204,6 @@ main{
     </div>
 
 </div>
-
-<input type="checkbox" id="menu">
 
 </header>
 
@@ -222,12 +214,12 @@ main{
 <h1>Welcome to Basirah Institute of Research & Development</h1>
 
 <p>
-Your content goes here.
+Your website content goes here.
 </p>
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<p>Scroll down to test the sticky header.</p>
+<p>Scroll to test the sticky header.</p>
 
 <br><br><br><br><br><br><br><br><br><br>
 
@@ -236,6 +228,12 @@ Your content goes here.
 </div>
 
 </main>
+
+<script>
+function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
