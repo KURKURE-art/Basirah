@@ -1,0 +1,1075 @@
+/*==================================================
+ BASIRAH INSTITUTE OF RESEARCH & DEVELOPMENT
+ STYLE.CSS
+ PART 1
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/*====================================
+HEADER
+====================================*/
+
+header{
+    position:sticky;
+    top:0;
+    width:100%;
+    background:#0f2d52;
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+    gap:30px;
+    padding:12px 35px;
+    box-shadow:0 6px 18px rgba(0,0,0,.18);
+    z-index:9999;
+}
+
+/*====================================
+LEFT TITLE
+====================================*/
+
+.logo-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.title{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* Arabic */
+
+.arabic{
+
+    font-family:'Amiri',serif;
+
+    font-size:38px;
+
+    color:#D4AF37;
+
+    font-weight:bold;
+
+    line-height:1;
+
+    margin-bottom:3px;
+
+}
+
+/* English Line */
+
+.english-line{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    white-space:nowrap;
+
+}
+
+.english{
+
+    font-family:Georgia,serif;
+
+    color:#D4AF37;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+}
+
+.institute{
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/*====================================
+NAVIGATION
+====================================*/
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:34px;
+
+    margin-left:auto;
+
+    margin-right:90px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-7px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:20px;
+
+    background:#D4AF37;
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    color:#D4AF37;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/*====================================
+LOGO
+====================================*/
+
+.logo-box{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+}
+
+.logo-box img{
+
+    width:82px;
+
+    height:82px;
+
+    object-fit:contain;
+
+    display:block;
+
+    transition:.35s ease;
+
+    cursor:pointer;
+
+}
+
+.logo-box img:hover{
+
+    transform:scale(1.08);
+
+    filter:drop-shadow(0 8px 15px rgba(0,0,0,.25));
+
+}
+
+/*====================================
+HAMBURGER
+====================================*/
+
+.menu-btn{
+
+    display:none;
+
+    color:white;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+/*====================================
+MOBILE MENU
+====================================*/
+
+.mobile-menu{
+
+    display:none;
+
+    background:#0f2d52;
+
+}
+
+.mobile-menu a{
+
+    display:block;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:18px 22px;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    transition:.3s;
+
+}
+
+.mobile-menu a:hover{
+
+    background:#D4AF37;
+
+    color:#0f2d52;
+
+}
+/*==================================================
+ HERO SECTION
+==================================================*/
+
+.hero{
+    background:linear-gradient(135deg,#0f2d52,#1f4e87);
+    color:#fff;
+    min-height:450px;
+    display:flex;
+    align-items:center;
+    padding:90px 8%;
+}
+
+.hero-text{
+    max-width:750px;
+}
+
+.hero h1{
+    font-size:50px;
+    font-weight:700;
+    line-height:1.25;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.9;
+    color:rgba(255,255,255,.9);
+    max-width:650px;
+}
+
+.hero button{
+    margin-top:35px;
+    padding:16px 40px;
+    border:none;
+    border-radius:50px;
+    background:#D4AF37;
+    color:#0f2d52;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.hero button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+
+/*==================================================
+ MAIN LAYOUT
+==================================================*/
+
+.container{
+    width:95%;
+    margin:40px auto;
+    display:flex;
+    gap:35px;
+    align-items:flex-start;
+}
+
+/* Main Content */
+
+main{
+    flex:1;
+}
+
+/*==================================================
+ CARD
+==================================================*/
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+
+.card h2{
+    color:#0f2d52;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.card p{
+    font-size:16px;
+    color:#555;
+    line-height:1.9;
+}
+
+/*==================================================
+ OPTIONAL CONTENT BOXES
+==================================================*/
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:35px;
+}
+
+.info-box{
+    background:#fff;
+    padding:28px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.info-box:hover{
+    transform:translateY(-6px);
+}
+
+.info-box h3{
+    color:#0f2d52;
+    margin-bottom:15px;
+}
+
+.info-box p{
+    color:#666;
+    line-height:1.8;
+}
+
+/*==================================================
+ COMMON BUTTON
+==================================================*/
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 30px;
+    background:#D4AF37;
+    color:#0f2d52;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    transition:.35s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+/*==================================================
+ SIDEBAR
+==================================================*/
+
+/*==================================================
+ SIDEBAR CATEGORY SYSTEM
+==================================================*/
+
+aside{
+    width:320px;
+    flex-shrink:0;
+}
+
+
+/* Sidebar Main Box */
+
+.sidebar{
+
+    position:sticky;
+
+    top:110px;
+
+    height:78vh;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    border:1px solid #e6eaf0;
+
+}
+
+
+/* Sidebar Heading */
+
+.sidebar h3{
+
+    background:linear-gradient(135deg,#0f2d52,#18467d);
+
+    color:white;
+
+    text-align:center;
+
+    padding:18px;
+
+    font-size:22px;
+
+}
+
+
+/* Category Box */
+
+.sidebar-category{
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+/* Category Button */
+
+.side-btn{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border:none;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#333;
+
+    transition:.35s;
+
+}
+
+
+.side-btn:hover{
+
+    background:#0f2d52;
+
+    color:white;
+
+}
+
+
+/* Plus Icon */
+
+.side-btn span{
+
+    font-size:22px;
+
+    color:#D4AF37;
+
+    transition:.3s;
+
+}
+
+
+/* Active Button */
+
+.side-btn.active{
+
+    background:#0f2d52;
+
+    color:white;
+
+}
+
+
+/* Rotate plus */
+
+.side-btn.active span{
+
+    transform:rotate(45deg);
+
+}
+
+
+/* Hidden Links Area */
+
+.side-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .4s ease;
+
+    background:#f8fafc;
+
+}
+
+
+/* Open Links */
+
+.side-content.open{
+
+    max-height:300px;
+
+}
+
+
+/* Links */
+
+.side-content a{
+
+    display:block;
+
+    padding:14px 25px;
+
+    text-decoration:none;
+
+    color:#444;
+
+    border-top:1px solid #eee;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+
+.side-content a:hover{
+
+    background:#D4AF37;
+
+    color:#0f2d52;
+
+    padding-left:35px;
+
+}
+
+
+/* Scroll if many categories */
+
+.sidebar{
+
+    overflow-y:auto;
+
+}
+
+
+.sidebar::-webkit-scrollbar{
+
+    width:7px;
+
+}
+
+
+.sidebar::-webkit-scrollbar-thumb{
+
+    background:#0f2d52;
+
+    border-radius:20px;
+
+}
+
+/*==================================================
+ FOOTER
+==================================================*/
+
+footer{
+
+    margin-top:70px;
+
+    background:#0f2d52;
+
+    color:white;
+
+    text-align:center;
+
+    padding:28px;
+
+    font-size:15px;
+
+}
+
+/*==================================================
+ GLOBAL ANIMATIONS
+==================================================*/
+
+.card,
+.sidebar,
+.hero button,
+.logo-box img,
+.sidebar-links a{
+
+    transition:.35s ease;
+
+}
+
+/* Card Hover */
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* Sidebar Hover */
+
+.sidebar:hover{
+
+    box-shadow:0 16px 40px rgba(0,0,0,.16);
+
+}
+
+/* Button Hover */
+
+.hero button:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* Logo Hover */
+
+.logo-box img:hover{
+
+    transform:scale(1.08);
+
+}
+
+/*==================================================
+ OPTIONAL SHADOW EFFECTS
+==================================================*/
+
+.card,
+.sidebar{
+
+    border:1px solid rgba(0,0,0,.04);
+
+}
+
+.hero button{
+
+    box-shadow:0 8px 20px rgba(212,175,55,.25);
+
+}
+
+nav a{
+
+    letter-spacing:.3px;
+
+}
+
+/*==================================================
+ SELECTION COLOR
+==================================================*/
+
+::selection{
+
+    background:#D4AF37;
+
+    color:#0f2d52;
+
+}
+/*==================================================
+ PART 4
+ RESPONSIVE DESIGN & FINAL POLISH
+==================================================*/
+
+/* ---------------- Tablets ---------------- */
+
+@media (max-width:1100px){
+
+header{
+    padding:12px 25px;
+}
+
+/* Navigation */
+
+nav{
+    gap:22px;
+    margin-right:40px;
+}
+
+nav a{
+    font-size:15px;
+}
+
+/* Logo */
+
+.logo-box img{
+    width:70px;
+    height:70px;
+}
+
+/* Titles */
+
+.arabic{
+    font-size:34px;
+}
+
+.english{
+    font-size:26px;
+}
+
+.institute{
+    font-size:21px;
+}
+
+/* Hero */
+
+.hero{
+    padding:70px 7%;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* Sidebar */
+
+aside{
+    width:290px;
+}
+
+}
+
+/* ---------------- Mobile ---------------- */
+
+@media (max-width:900px){
+
+header{
+
+    height:auto;
+
+    padding:15px 20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* Hide Desktop Nav */
+
+nav{
+    display:none;
+}
+
+/* Hamburger */
+
+.menu-btn{
+    display:block;
+    margin-left:auto;
+    font-size:34px;
+}
+
+/* Logo */
+
+.logo-box{
+    margin-left:15px;
+}
+
+.logo-box img{
+    width:60px;
+    height:60px;
+}
+
+/* Title */
+
+.logo-section{
+    width:100%;
+}
+
+.title{
+    width:100%;
+}
+
+.arabic{
+    font-size:30px;
+}
+
+.english-line{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:2px;
+}
+
+.english{
+    font-size:23px;
+}
+
+.institute{
+    font-size:17px;
+}
+
+/* Hero */
+
+.hero{
+
+    min-height:auto;
+
+    padding:60px 8%;
+
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.hero button{
+    width:100%;
+}
+
+/* Layout */
+
+.container{
+    flex-direction:column;
+}
+
+main{
+    width:100%;
+}
+
+aside{
+    width:100%;
+}
+
+/* Sidebar */
+
+.sidebar{
+
+    position:relative;
+
+    top:0;
+
+    height:400px;
+
+}
+
+/* Card */
+
+.card{
+    padding:28px;
+}
+
+}
+
+/* ---------------- Small Phones ---------------- */
+
+@media (max-width:600px){
+
+header{
+    padding:12px 15px;
+}
+
+.logo-box img{
+    width:55px;
+    height:55px;
+}
+
+.arabic{
+    font-size:26px;
+}
+
+.english{
+    font-size:20px;
+}
+
+.institute{
+    font-size:15px;
+}
+
+.hero{
+    padding:45px 6%;
+}
+
+.hero h1{
+    font-size:28px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+.hero button{
+    padding:15px;
+}
+
+.card{
+    padding:22px;
+}
+
+.card h2{
+    font-size:26px;
+}
+
+.sidebar{
+    height:360px;
+}
+
+.sidebar h3{
+    font-size:20px;
+}
+
+.sidebar-links a{
+    padding:15px;
+    font-size:15px;
+}
+
+footer{
+    padding:22px;
+    font-size:14px;
+}
+
+}
+
+/* ---------------- Mobile Menu Animation ---------------- */
+
+.mobile-menu{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .35s ease;
+
+}
+
+.mobile-menu.show{
+
+    display:block;
+
+    max-height:500px;
+
+}
+
+.mobile-menu a{
+
+    opacity:0;
+
+    transform:translateY(-8px);
+
+    transition:all .3s ease;
+
+}
+
+.mobile-menu.show a{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ---------------- Smooth Effects ---------------- */
+
+html{
+    scroll-behavior:smooth;
+}
+
+img{
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+button{
+    transition:.3s;
+}
+
+a{
+    transition:.3s;
+}
+
+/* Nice focus effect */
+
+button:focus,
+a:focus{
+
+    outline:none;
+
+}
+
+/* Prevent horizontal scrolling */
+
+body{
+
+    overflow-x:hidden;
+
+}
+
+/* End of style.css */
