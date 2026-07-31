@@ -99,3 +99,26 @@ sidebarButtons.forEach(button => {
 
 
 });
+/* ===========================
+   UNDER CONSTRUCTION SCREEN
+=========================== */
+
+const constructionScreen = document.getElementById("constructionScreen");
+const enterSite = document.getElementById("enterSite");
+
+if (constructionScreen && enterSite) {
+
+    enterSite.addEventListener("click", () => {
+
+        constructionScreen.style.opacity = "0";
+        constructionScreen.style.visibility = "hidden";
+        constructionScreen.style.transition = "opacity .8s ease, visibility .8s ease";
+
+        document.body.style.overflowY = "auto";
+
+    });
+
+}
+
+// Prevent scrolling while the screen is visible
+document.body.style.overflow = "hidden";
